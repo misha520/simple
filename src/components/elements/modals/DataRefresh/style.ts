@@ -1,0 +1,73 @@
+import { makeStyles } from "@material-ui/core";
+
+export const useStyles = makeStyles(({ shadows, palette }) => ({
+  modal: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  paper: {
+    backgroundColor: "#FFFFFF",
+    boxShadow: shadows[5],
+    borderRadius: "14px",
+    maxWidth: "271px",
+    width: "95%",
+    padding: "24px",
+    outline: "none",
+    display: "flex",
+    flexDirection: "column",
+    gap: "24px",
+    maxHeight: window.innerHeight - 50,
+    overflow: "auto",
+  },
+  updateBtn: {
+    color: "#FFF",
+    background: palette.all.blue,
+    height: "40px",
+    borderRadius: "8px",
+    width: "100%",
+    "&:hover": { background: `${palette.all.blue}B3` },
+  },
+  tabs: {
+    background: `${palette.all.gray}1A`,
+    // padding: "4px",
+    borderRadius: "57px",
+    height: "53px",
+    overflow: "hidden",
+  },
+  tab: {
+    color: `${palette.all.black}80`,
+    width: "calc(50% - 8px)",
+    minWidth: "0",
+    borderRadius: "57px",
+    minHeight: "45px",
+    margin: "4px",
+    fontSize: "16px",
+    fontWeight: 500,
+    "&.Mui-selected": {
+      background: "#FFF",
+    },
+  },
+  optionTxt: { fontSize: "14px", fontWeight: 400 },
+  optionWrapper: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+  iconWrapper: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    background: `${palette.all.gray}1A`,
+    borderRadius: "50%",
+    height: "20px",
+    width: "20px",
+  },
+  description: {
+    fontSize: "14px",
+    fontWeight: 500,
+    color: "#171B1E80",
+    textAlign: "center",
+    marginBottom: "10px",
+  },
+}));

@@ -1,0 +1,81 @@
+import { makeStyles } from "@material-ui/core";
+
+export const useStyles = makeStyles(({ shadows, palette, breakpoints }) => ({
+  modal: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  paper: {
+    backgroundColor: "#FFFFFF",
+    boxShadow: shadows[5],
+    borderRadius: "14px",
+    maxWidth: "546px",
+    width: "95%",
+    padding: "24px",
+    outline: "none",
+    display: "flex",
+    flexDirection: "column",
+    gap: "24px",
+    maxHeight: window.innerHeight - 50,
+    overflow: "auto",
+    [breakpoints.down("xs")]: {
+      padding: "20px",
+    },
+  },
+  title: { fontWeight: 600, fontSize: "20px" },
+  iconBtn: {
+    cursor: "pointer",
+    transition: "0.3s",
+    "&:hover": {
+      opacity: "0.7",
+    },
+  },
+  titleWrapper: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+  ownerName: { fontSize: "18px", fontWeight: 500 },
+  ownerWork: { fontSize: "14px", fontWeight: 600, color: palette.all.blue },
+  avatarWrapper: {
+    height: "64px",
+    width: "64px",
+    background: "#E6646E36",
+    borderRadius: "5px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "flex-end",
+    marginRight: "11px",
+  },
+  avatar: { height: "51px", width: "51px" },
+  addBtn: {
+    color: palette.all.blue,
+    background: `${palette.all.blue}26`,
+    height: "40px",
+    borderRadius: "8px",
+  },
+  subHead: {
+    fontSize: "14px",
+    fontWeight: 500,
+    opacity: 0.5,
+  },
+  creditValue: {
+    fontSize: "24px",
+    fontWeight: 700,
+  },
+  scoreCardWrapper: {
+    display: "flex",
+    flexDirection: "column",
+    gap: "24px",
+    padding: "30px 24px",
+    borderRadius: "15px",
+    [breakpoints.down("xs")]: { padding: "20px 14px" },
+  },
+  valueWrapper: {
+    width: "100%",
+    [breakpoints.down("xs")]: {
+      textAlign: "center",
+    },
+  },
+}));
